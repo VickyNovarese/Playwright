@@ -33,6 +33,9 @@ import { test, expect } from '@playwright/test';
         await numInput.fill('12345')
         await buttomInput.click()
         await expect (messageNumber).toHaveText('one, two, three, four, five')
+        await numInput.fill('54321')
+        await buttomInput.click()
+        await expect (messageNumber).toHaveText('five, four, three, two, one')
 
 
 
